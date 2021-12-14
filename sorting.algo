@@ -1,0 +1,19 @@
+ALGORITHM insertion_sort
+    FUNCTION insertionSort(arr) : array
+    VAR
+        i: INTEGER;
+        value: INTEGER;
+        j: INTEGER;
+    BEGIN
+        for i = 1 to length(arr) inclusive do:
+            value = arr[i]
+            j = i - 1
+
+            while j >= 0 and  arr[j] > value do:
+                arr[j + 1] = arr[j]
+                j = j - 1
+            END while
+            arr[j + 1] = value
+        END for
+        RETURN arr ;
+    END
